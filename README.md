@@ -1,5 +1,6 @@
 newsfeed-start
 ==============
+<<<<<<< HEAD
 
 Simple project start using Parse.com as a newsfeed source
 
@@ -71,3 +72,5 @@ $.ajax('url-goes-here',
 ####If you're having a hard time populating the news items, use `console.log` to make sure you're getting data.
 ####Also, use `console.log` to check the structure of the data. Make sure it looks like you expect it to look.
 
+=======
+>>>>>>> 6025be56d4ea723e825020e72ec71a7c9f7e93f6
