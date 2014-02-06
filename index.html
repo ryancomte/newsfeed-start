@@ -2,7 +2,6 @@
 <head>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
 	<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="script.js"></script>
 	<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
 	<style type="text/css">
 		body {
@@ -21,11 +20,23 @@
 		}
 	</style>
 </head>
-<body>
+<body ng-app="newsItemsApp" ng-controller="MainCtrl">
+<div class="button">
+    <input ng-model="data.title" type="text" placeholder="Enter Title Here">
+    <input ng-model="data.body" type="text" placeholder="Enter Body Here">
+    <button ng-click="newPost(data)">New Article</button>
+</div>
 	<div class="container">
 		<h1 class="title">Extra! Extra!</h1>
-		<div class="newsfeed">
+		<div class="newsfeed" ng-repeat="items in data">
+            <div>
+                <h1>{{items.title}}</h1>
+                <p>{{items.body}}</p>
+            </div>
 		</div>
 	</div>
+    <script src="node_modules/angular/lib/angular.min.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
